@@ -9,6 +9,10 @@ var posterImage.src = document.querySelector(".poster-img")
 var posterTitle.innerText = document.querySelector(".poster-title")
 var posterQuote.innerText = document.querySelector(".poster-quote")
 
+var takeMeBackButton = document.querySelector(".show-main")
+var posterImage.src = document.querySelector(".poster-img")
+var posterTitle.innerText = document.querySelector(".poster-title")
+var posterQuote.innerText = document.querySelector(".poster-quote")
 
 // we've provided you with some data to work with 👇
 var images = [
