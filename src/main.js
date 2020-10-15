@@ -118,6 +118,10 @@ var currentPoster;
 window.addEventListener("load", showRandomPoster);
 showRandomPosterButton.addEventListener("click", showRandomPoster);
 
+window.addEventListener("click", takeBack);
+takeMeBackButton.addEventListener("click", takeBack);
+
+
 // functions and event handlers go here 👇
 function randomizePoster() {
   currentPoster = new Poster(
