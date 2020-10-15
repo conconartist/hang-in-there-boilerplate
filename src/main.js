@@ -3,6 +3,13 @@ var showRandomPosterButton = document.querySelector(".show-random")
 var posterTitle = document.querySelector(".poster-title")
 var posterImage = document.querySelector(".poster-img")
 var posterQuote = document.querySelector(".poster-quote")
+
+var makeYourOwnPosterButton = document.querySelector(".show-form")
+var posterImage.src = document.querySelector(".poster-img")
+var posterTitle.innerText = document.querySelector(".poster-title")
+var posterQuote.innerText = document.querySelector(".poster-quote")
+
+
 // we've provided you with some data to work with 👇
 var images = [
   "./assets/bees.jpg",
