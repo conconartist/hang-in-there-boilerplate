@@ -1,5 +1,5 @@
 // query selector variables go here 👇
-
+var showRandomPosterButton = document.querySelector(".show-random")
 // we've provided you with some data to work with 👇
 var images = [
   "./assets/bees.jpg",
@@ -102,8 +102,15 @@ var savedPosters = [];
 var currentPoster;
 
 // event listeners go here 👇
+showRandomPosterButton.addEventListener("click", showRandomPoster);
 
 // functions and event handlers go here 👇
+function showRandomPoster() {
+
+}
+
+  //show random poster button will show a random poster 
+  
 // (we've provided one for you to get you started)!
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
