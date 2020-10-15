@@ -100,18 +100,26 @@ var quotes = [
 ];
 var savedPosters = [];
 var currentPoster;
+// data model will be pulled from lines 101-102
 
 // event listeners go here 👇
+window.addEventListener("load", showRandomPoster);
 showRandomPosterButton.addEventListener("click", showRandomPoster);
 
 // functions and event handlers go here 👇
+function randomizePoster() {
+  currentPoster = new Poster(
+  images[getRandomIndex(images)],
+  titles[getRandomIndex(titles)],
+  quotes[getRandomIndex(quotes)]
+  );
+};
+//creating a new intance of the poster class in 110-115
 function showRandomPoster() {
+  randomizePoster();
+};
+//the above is our handler 
 
-}
-
-  //show random poster button will show a random poster 
-  
-// (we've provided one for you to get you started)!
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
