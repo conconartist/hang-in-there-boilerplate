@@ -130,45 +130,19 @@ takeBackBtn.addEventListener("click", goToMain);
 backToMainBtn.addEventListener("click", goToMain);
 showMadePosterBtn.addEventListener("click", displayMadePoster);
 savePosterBtn.addEventListener("click", savePosterToGrid);
-savedPostersGrid.addEventListener("dblclick", deletePoster);
+savedPostersGrid.addEventListener("dblclick", deletePosterFromGrid);
 
 // functions and event handlers go here 👇
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
-}
-
-function randomizePoster() {
-  currentPoster = new Poster(
-    images[getRandomIndex(images)],
-    titles[getRandomIndex(titles)],
-    quotes[getRandomIndex(quotes)]
-  )
-};
-
-function displayPoster() {
-  posterImage.src = currentPoster.imageURL;
-  posterTitle.innerText = currentPoster.title;
-  posterQuote.innerText = currentPoster.quote
-}
 function displayRandomPoster() {
   randomizePoster();
   displayPoster();
 };
 
-function makePoster() {
-  toggleView(form, mainPoster)
+function displaySavedPosters() {
+  toggleView(mainPoster, savedPostersDisplay);
+  displaySavedPostersGrid();
 }
 
-function saveUserInput() {
-  images.unshift(formPosterImg.value);
-  titles.unshift(formTitle.value);
-  quotes.unshift(formQuote.value);
-}
-function clearUserInput() {
-  formPosterImg.value = "";
-  formTitle.value = "";
-  formQuote.value = "";
-}
 function displayMadePoster() {
   event.preventDefault();
   currentPoster = new Poster(
@@ -182,10 +156,51 @@ function displayMadePoster() {
   clearUserInput();
 }
 
-function displaySavedPosters() {
-  event.preventDefault();
-  toggleView(mainPoster, savedPostersDisplay);
-  displaySavedPostersGrid();
+function displayPoster() {
+  posterImage.src = currentPoster.imageURL;
+  posterTitle.innerText = currentPoster.title;
+  posterQuote.innerText = currentPoster.quote
+}
+
+function displaySavedPostersGrid() {
+  savedPostersGrid.innerHTML = "";
+  for (var i = 0; i < savedPosters.length; i++) {
+    savedPostersGrid.insertAdjacentHTML("afterbegin", `
+      <section id="${savedPosters[i].id}" class="mini-poster">
+            <img id="${savedPosters[i].id}" class="poster-img" src=${savedPosters[i].imageURL} alt="nothin' to see here">
+            <h2 id="${savedPosters[i].id}" class="poster-title">${savedPosters[i].title}</h2>
+            <h4 id="${savedPosters[i].id}" ﬁclass="poster-quote">${savedPosters[i].quote}</h4>
+      </section>
+    `)
+  }
+}
+
+function makePoster() {
+  toggleView(form, mainPoster)
+}
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
+function randomizePoster() {
+  currentPoster = new Poster(
+    images[getRandomIndex(images)],
+    titles[getRandomIndex(titles)],
+    quotes[getRandomIndex(quotes)]
+  )
+};
+
+function clearUserInput() {
+  formPosterImg.value = "";
+  formTitle.value = "";
+  formQuote.value = "";
+}
+
+function saveUserInput() {
+  images.unshift(formPosterImg.value);
+  titles.unshift(formTitle.value);
+  quotes.unshift(formQuote.value);
 }
 
 function savePoster(currentPoster) {
@@ -194,38 +209,20 @@ function savePoster(currentPoster) {
   }
 }
 
-function displaySavedPostersGrid() {
-  savedPostersGrid.innerHTML = "";
-  for (var i = 0; i < savedPosters.length; i++) {
-    savedPostersGrid.insertAdjacentHTML("afterbegin", `
-      <section class="mini-poster">
-          <div id="${savedPosters[i].id}">
-            <img class="poster-img" src=${savedPosters[i].imageURL} alt="nothin' to see here">
-            <h2 class="poster-title">${savedPosters[i].title}</h2>
-            <h4 class="poster-quote">${savedPosters[i].quote}</h4>
-          </div>
-      </section>
-    `)
-  }
-}
-
 function savePosterToGrid() {
   savePoster(currentPoster);
 }
 
-function deletePoster() {
-  //poster will be deleted from grid
-  //target ---> savedPostersGrid
-  //target class ---> "mini-poster"
-  if (event.target.classList.contains("mini-poster")) {
-      console.log("pls work")
+function deletePosterFromGrid() {
+  deleteMiniPoster(savedPosters);
+}
+function deleteMiniPoster(savedPosters) {
     for (var i = 0; i < savedPosters.length; i++) {
-      if (event.target.id === savedPosters[i].id){
-        console.log("yessss")
+      if (event.target.id === `${savedPosters[i].id}`){
       savedPosters.splice(i, 1);
       }
     }
-  }
+  displaySavedPostersGrid();
 }
 
 function goToMain() {
