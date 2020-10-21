@@ -7,7 +7,7 @@ Connie Hong
 
 ## Project Links:
 
-Deployed Github page can be found [here] (https://conconartist.github.io/hang-in-there-boilerplate/)
+Deployed Github page can be found [here](https://conconartist.github.io/hang-in-there-boilerplate/)
 
 Project spec & rubric can be found [here](https://frontend.turing.io/projects/module-1/hang-in-there.html)
 
@@ -25,7 +25,7 @@ Create functionality for a website that generates motivational posters with a ra
 
 ## How to Run and View:
 
-* Go to the deployed [page] (https://conconartist.github.io/hang-in-there-boilerplate/) and navigate through the buttons.
+* Go to the deployed [page](https://conconartist.github.io/hang-in-there-boilerplate/) and navigate through the buttons.
 * "Save This Poster" should save the current poster to the array and later be displayed when "Show Saved Posters" is clicked.  
 * "Show Another Random Poster" will display another poster with a random image, title, and quote.  
 * The "Make Your Own Poster" button will take you to a form view that lets you enter your own image URL, title, and quote to generate a poster.  
@@ -47,3 +47,5 @@ Create functionality for a website that generates motivational posters with a ra
 **10/20-2020** - *With mentor review and previous work, was able to come up with a solution to Iteration 4.*  Refactored the completed project.  Project due at 9pm.
 
 ## Showcase:
+
+<iframe src="https://giphy.com/embed/deaDPF4FWzZav736oB" width="480" height="278" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/deaDPF4FWzZav736oB">via GIPHY</a></p>
