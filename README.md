@@ -4,7 +4,9 @@
 ## Contributers:
 
 Connie Hong
+
 Cameron Romo
+
 Tiffany Bacher
 
 ## Project Links:
@@ -29,10 +31,14 @@ Create functionality for a website that generates motivational posters with a ra
 
 * Go to the deployed [page](https://conconartist.github.io/hang-in-there-boilerplate/) and navigate through the buttons.
 * "Save This Poster" should save the current poster to the array and later be displayed when "Show Saved Posters" is clicked.  
+![](https://media.giphy.com/media/CfcBzSTkW1XeyvymFP/giphy.gif)
 * "Show Another Random Poster" will display another poster with a random image, title, and quote.  
 * The "Make Your Own Poster" button will take you to a form view that lets you enter your own image URL, title, and quote to generate a poster.  
-* When "Show my poster" is clicked, it will display a poster with this user input. Or, "Nevermind, take me back" will take the user to the home page.  
+* When "Show my poster" is clicked, it will display a poster with this user input. Or, "Nevermind, take me back" will take the user to the home page. 
+![](https://media.giphy.com/media/b2QlT86RYmbOOlViku/giphy.gif)
 * Once there are posters saved with the "Save This Poster" button, the user can go to the "Show Saved Posters" to view all saved posters and should be able to delete posters in the display with a double click on the poster image.
+![](https://media.giphy.com/media/deaDPF4FWzZav736oB/giphy.gif)
+![](https://media.giphy.com/media/K0oW6v5tPlBFO0wxwG/giphy.gif)
 
 ## Progression:
 
@@ -47,7 +53,3 @@ Create functionality for a website that generates motivational posters with a ra
 **10/19/2020** - *Worked on Iteration 4 with some difficulty.*  Submitted PR request for mentor review from Tiffany Bacher.  
 
 **10/20-2020** - *With mentor review and previous work, was able to come up with a solution to Iteration 4.*  Refactored the completed project.  Project due at 9pm.
-
-## Showcase:
-
-![](https://media.giphy.com/media/deaDPF4FWzZav736oB/giphy.gif)
