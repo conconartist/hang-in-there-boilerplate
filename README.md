@@ -1,9 +1,11 @@
 # Hang In There
 
 
-## Developer:
+## Contributers:
 
 Connie Hong
+Cameron Romo
+Tiffany Bacher
 
 ## Project Links:
 
@@ -48,4 +50,4 @@ Create functionality for a website that generates motivational posters with a ra
 
 ## Showcase:
 
-<iframe src="https://giphy.com/embed/deaDPF4FWzZav736oB" width="480" height="278" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/deaDPF4FWzZav736oB">via GIPHY</a></p>
+![](https://media.giphy.com/media/deaDPF4FWzZav736oB/giphy.gif)
